@@ -1,0 +1,11 @@
+[Unit]
+Description=Run MyDNS.JP IP Update Hourly
+
+[Timer]
+OnBootSec=45sec
+OnCalendar=*:00/15
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
