@@ -1,8 +1,13 @@
 [Unit]
-Description=MyDNS.JP IP Update Service
+Description=MyDNS.jp IP Update Service
 After=network-online.target
+Wants=network-online.target
 
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/mydns-update.sh
+User=root
+Group=root
 
+[Install]
+WantedBy=multi-user.target
